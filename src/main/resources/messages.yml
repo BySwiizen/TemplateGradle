@@ -1,0 +1,8 @@
+join: <bold><dark_green>File working.
+
+command:
+  prefix: <gold>TemplateGradle <gray>»
+  reload-success: <green>The configuration files have been reloaded.
+  help:
+    - <yellow>/templategradle reload <black>- <white>Reloads the plugin configuration files.
+    - <yellow>/templategradle help <black>- <white>Displays the help command.
