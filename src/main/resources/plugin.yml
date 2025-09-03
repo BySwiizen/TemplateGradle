@@ -1,0 +1,21 @@
+name: ${name}
+main: ${groupid}.${artifactid}
+description: ${description}
+author: ${author}
+
+version: ${version}
+api-version: ${apiversion}
+
+
+folia-supported: true
+load: POSTWORLD
+
+
+commands:
+  templategradle:
+    description: Main command of TemplateGradle
+    usage: /<command> [help|reload]
+permissions:
+  templategradle.reload:
+    description: Reload permission of TemplateGradle
+    default: op
