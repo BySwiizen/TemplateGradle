@@ -1,10 +1,10 @@
 package fr.byswiizen.templategradle.command.subcommands;
 
 import fr.byswiizen.templategradle.TemplateGradle;
+import fr.byswiizen.templategradle.util.ColorUtil;
 import revxrsal.commands.annotation.Command;
 import revxrsal.commands.annotation.Subcommand;
 import revxrsal.commands.bukkit.BukkitCommandActor;
-import net.kyori.adventure.text.minimessage.MiniMessage;
 
 
 @Command("templategradle")
@@ -19,7 +19,7 @@ public class HelpSubCommand {
     @Subcommand("help")
     public void help(BukkitCommandActor sender) {
 		for (String line : TemplateGradle.messagesfile.getStringList("command.help")) {
-            sender.reply(MiniMessage.miniMessage().deserialize(TemplateGradle.messagesfile.getString("command.prefix") + " " + line));
+            sender.reply(ColorUtil.translate(TemplateGradle.messagesfile.getString("command.prefix") + " " + line));
         }
 	}
 }

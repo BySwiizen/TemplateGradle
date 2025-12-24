@@ -1,8 +1,7 @@
 package fr.byswiizen.templategradle.listener;
 
 import fr.byswiizen.templategradle.TemplateGradle;
-import net.kyori.adventure.text.minimessage.MiniMessage;
-import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
+import fr.byswiizen.templategradle.util.ColorUtil;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -19,9 +18,7 @@ public class JoinListener implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
 		if (TemplateGradle.configfile.getBoolean("join.enabled")) {
-			String message = TemplateGradle.messagesfile.getString("join");
-			String legacy = LegacyComponentSerializer.legacySection().serialize(MiniMessage.miniMessage().deserialize(message));
-			event.setJoinMessage(legacy);
+			event.setJoinMessage(ColorUtil.translate(TemplateGradle.messagesfile.getString("join")));
 		}
     }
 }
