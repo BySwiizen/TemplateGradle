@@ -1,6 +1,5 @@
 package fr.byswiizen.templategradle;
 
-import com.tcoded.folialib.FoliaLib;
 import dev.dejvokep.boostedyaml.YamlDocument;
 import fr.byswiizen.templategradle.listener.JoinListener;
 import fr.byswiizen.templategradle.command.MainCommand;
@@ -23,7 +22,6 @@ public class TemplateGradle extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		registerMetrics();
-		registerFolia();
 		registerFiles();
 		registerListener();
 		registerSubCommands();
@@ -43,10 +41,6 @@ public class TemplateGradle extends JavaPlugin {
 
 	private void registerMetrics() {
 		new Metrics(this, 11111);
-	}
-
-	private void registerFolia() {
-		new FoliaLib(this);
 	}
 
 	private void registerFiles() {

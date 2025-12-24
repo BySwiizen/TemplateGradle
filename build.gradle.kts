@@ -24,8 +24,6 @@ repositories {
     maven(url = "https://jitpack.io")
     // SpigotMC
     maven(url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots")
-    // FoliaLib
-    maven(url = "https://repo.tcoded.com/releases")
 }
 
 dependencies {
@@ -37,8 +35,6 @@ dependencies {
     implementation(libs.commonslang3)
     // https://hub.spigotmc.org/stash/projects/SPIGOT/repos/spigot
     compileOnly(libs.spigot)
-    // https://github.com/TechnicallyCoded/FoliaLib
-    implementation(libs.folialib)
     // https://github.com/dejvokep/boosted-yaml
     implementation(libs.boostedyaml)
     // https://github.com/KyoriPowered/adventure
@@ -65,7 +61,6 @@ tasks {
         relocate("org.jetbrains.annotations", "fr.byswiizen.templategradle.libs.annotations")
         relocate("com.google.gson", "fr.byswiizen.templategradle.libs.gson")
         relocate("org.apache.commons", "fr.byswiizen.templategradle.libs.commonslang3")
-        relocate("com.tcoded.folialib", "fr.byswiizen.templategradle.libs.folialib")
         relocate("dev.dejvokep.boostedyaml", "fr.byswiizen.templategradle.libs.boostedyaml")
         relocate("org.bstats", "fr.byswiizen.templategradle.libs.metrics")
         archiveFileName.set("${project.name}-${project.version}.jar")
