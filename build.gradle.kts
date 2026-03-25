@@ -61,7 +61,7 @@ tasks {
         relocate("org.jetbrains.annotations", "fr.byswiizen.templategradle.libs.annotations")
         relocate("com.google.gson", "fr.byswiizen.templategradle.libs.gson")
         relocate("org.apache.commons", "fr.byswiizen.templategradle.libs.commonslang3")
-        relocate("org.tcoded.folialib", "fr.byswiizen.templategradle.libs.folialib")
+        relocate("com.tcoded.folialib", "fr.byswiizen.templategradle.libs.folialib")
         relocate("dev.dejvokep.boostedyaml", "fr.byswiizen.templategradle.libs.boostedyaml")
         relocate("org.bstats", "fr.byswiizen.templategradle.libs.metrics")
         archiveFileName.set("${project.name}-${project.version}.jar")
