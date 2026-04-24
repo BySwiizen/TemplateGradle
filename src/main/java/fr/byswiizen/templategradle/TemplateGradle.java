@@ -1,5 +1,6 @@
 package fr.byswiizen.templategradle;
 
+import com.tcoded.folialib.FoliaLib;
 import dev.dejvokep.boostedyaml.YamlDocument;
 import fr.byswiizen.templategradle.listener.JoinListener;
 import fr.byswiizen.templategradle.command.MainCommand;
@@ -21,6 +22,7 @@ public class TemplateGradle extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
+		registerFolia();
 		registerMetrics();
 		registerFiles();
 		registerListener();
@@ -37,6 +39,10 @@ public class TemplateGradle extends JavaPlugin {
 		getLogger().info(getName() + " v" + getDescription().getVersion());
 		getLogger().info("The plugin is disabled.");
 		getLogger().info("------------------------");
+	}
+
+	private void registerFolia() {
+		new FoliaLib(this);
 	}
 
 	private void registerMetrics() {
