@@ -25,7 +25,6 @@ public class ReloadSubCommand {
             TemplateGradle.messagesfile.reload();
             sender.reply(ColorUtil.translate(TemplateGradle.messagesfile.getString("command.prefix") + " " + ColorUtil.translate(TemplateGradle.messagesfile.getString("command.reload-success"))));
         } catch (Exception error) {
-            sender.reply(ColorUtil.translate("&4Error loading files."));
             error.printStackTrace();
         }
     }
